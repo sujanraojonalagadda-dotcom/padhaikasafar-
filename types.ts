@@ -75,17 +75,8 @@ export interface Course {
   education_level: 'Diploma' | 'UG' | 'PG' | 'All';
   link: string;
   is_new: boolean;
-}
-
-export interface Opportunity {
-  id: string;
-  title: string;
-  type: 'Hackathon' | 'Internship' | 'Training' | 'Competition';
-  provider: string;
-  category: 'Tech' | 'Core' | 'Trading' | 'Finance' | 'Research';
-  deadline: string;
-  link: string;
-  is_new: boolean;
+  priceType?: 'Free' | 'Paid';
+  isInternship?: boolean;
 }
 
 export interface CourseStatus {
@@ -110,15 +101,25 @@ export interface SyncEvent {
   type: 'course' | 'opportunity' | 'scholarship';
 }
 
-// Fixed missing type: InterviewQuestion
 export interface InterviewQuestion {
   question: string;
   answer: string;
 }
 
-// Fixed missing type: AptitudeQuestion
 export interface AptitudeQuestion {
   question: string;
   options: string[];
   correctIndex: number;
+}
+
+// Added missing Opportunity interface to fix import errors in constants.tsx and opportunity engines
+export interface Opportunity {
+  id: string;
+  title: string;
+  type: 'Hackathon' | 'Competition' | 'Internship' | 'Training';
+  provider: string;
+  category: 'Tech' | 'Trading' | 'Finance' | 'Core' | 'Research';
+  deadline: string;
+  link: string;
+  is_new: boolean;
 }

@@ -1,10 +1,6 @@
-
-import React from 'react';
-import { ExternalPlatform, Scholarship, Internship, Course, Opportunity } from './types';
-
 export const SYNC_INTERVAL_MS = 15000;
 
-export const SCHOLARSHIP_DATA: Scholarship[] = [
+export const SCHOLARSHIP_DATA = [
   {
     id: 'nsp_post_matric',
     name: 'NSP Post Matric Scholarship',
@@ -25,7 +21,7 @@ export const SCHOLARSHIP_DATA: Scholarship[] = [
   }
 ];
 
-export const OPPORTUNITY_DATABASE: Opportunity[] = [
+export const OPPORTUNITY_DATABASE = [
   {
     id: 'sih_2025',
     title: 'Smart India Hackathon 2025',
@@ -58,7 +54,7 @@ export const OPPORTUNITY_DATABASE: Opportunity[] = [
   }
 ];
 
-export const COURSE_DATABASE: Course[] = [
+export const COURSE_DATABASE = [
   {
     id: 'swayam_python',
     title: 'Python for Data Science',
@@ -127,7 +123,7 @@ export const COURSE_DATABASE: Course[] = [
   }
 ];
 
-export const INTERNSHIP_PORTALS: Internship[] = [
+export const INTERNSHIP_PORTALS = [
   {
     id: 'aicte_official',
     title: 'AICTE Internship Portal',
@@ -141,7 +137,7 @@ export const INTERNSHIP_PORTALS: Internship[] = [
   }
 ];
 
-export const EXTERNAL_PLATFORMS: ExternalPlatform[] = [
+export const EXTERNAL_PLATFORMS = [
   {
     id: 'aicte_internship',
     name: 'AICTE Internship Portal',
@@ -168,10 +164,8 @@ export const ENGINEERING_ROADMAPS = [
     focus: 'Logic & Fundamentals',
     color: 'from-blue-500 to-indigo-600',
     milestones: [
-      { title: 'Programming Logic', desc: 'Mastering basics of C/C++ or Python and problem-solving flow.' },
-      { title: 'Web Development', desc: 'HTML5, CSS3, and JavaScript basics for front-end creation.' },
-      { title: 'Core Math', desc: 'Discrete Mathematics and Linear Algebra foundations.' },
-      { title: 'Professional Skills', desc: 'Effective communication and technical writing.' }
+      { title: 'Programming Logic', desc: 'Mastering basics of C/C++ or Python.' },
+      { title: 'Web Development', desc: 'HTML5, CSS3, and JavaScript basics.' }
     ]
   },
   {
@@ -179,32 +173,8 @@ export const ENGINEERING_ROADMAPS = [
     focus: 'DSA & Development',
     color: 'from-emerald-500 to-teal-600',
     milestones: [
-      { title: 'Data Structures', desc: 'Advanced DSA including Trees, Graphs, and DP.' },
-      { title: 'Backend/Fullstack', desc: 'Building APIs with Node.js and database management.' },
-      { title: 'CS Fundamentals', desc: 'Operating Systems and Computer Networks core concepts.' },
-      { title: 'Dev Environment', desc: 'Version control with Git and Linux command line.' }
-    ]
-  },
-  {
-    year: '3rd Year',
-    focus: 'Specialization',
-    color: 'from-amber-500 to-orange-600',
-    milestones: [
-      { title: 'Cloud Computing', desc: 'AWS/Azure basics and containerization with Docker.' },
-      { title: 'System Design', desc: 'Scalable architecture and microservices design.' },
-      { title: 'AI & ML', desc: 'Introduction to data science and machine learning models.' },
-      { title: 'Industry Prep', desc: 'Building a portfolio and starting internship hunts.' }
-    ]
-  },
-  {
-    year: '4th Year',
-    focus: 'Placement & Career',
-    color: 'from-rose-500 to-pink-600',
-    milestones: [
-      { title: 'Placement Drills', desc: 'Aptitude tests and technical interview practice.' },
-      { title: 'Capstone Project', desc: 'Developing a complete end-to-end industry-level project.' },
-      { title: 'Placement Drives', desc: 'Applying for MNCs and startup opportunities.' },
-      { title: 'Corporate Bridge', desc: 'Soft skills for office culture and professional etiquette.' }
+      { title: 'Data Structures', desc: 'Advanced DSA including Trees, Graphs.' },
+      { title: 'Backend/Fullstack', desc: 'Building APIs with Node.js.' }
     ]
   }
 ];

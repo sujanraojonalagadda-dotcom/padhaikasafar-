@@ -406,18 +406,22 @@ const AIPreparationHub: React.FC = () => {
                href={channel.url}
                target="_blank"
                rel="noopener noreferrer"
-               className="bg-white p-6 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 transition-all group"
+               className="bg-white p-6 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 transition-all group flex flex-col"
              >
                <div className="flex items-center justify-between mb-4">
                  <div className="text-3xl group-hover:scale-110 transition-transform">{channel.icon}</div>
-                 <div className="px-2 py-0.5 bg-indigo-50 text-indigo-600 text-[8px] font-black rounded uppercase tracking-widest">YouTube</div>
+                 <div className="px-2 py-0.5 bg-indigo-50 text-indigo-600 text-[8px] font-black rounded uppercase tracking-widest border border-indigo-100">YouTube</div>
                </div>
                <h5 className="font-black text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">{channel.name}</h5>
-               <p className="text-xs text-slate-500 font-medium leading-relaxed line-clamp-3 mb-4">{channel.description}</p>
+               <p className="text-xs text-slate-500 font-medium leading-relaxed line-clamp-3 mb-6">{channel.description}</p>
+               
                <div className="mt-auto pt-4 border-t border-slate-50 flex items-center justify-between">
-                 <span className="text-[10px] font-black text-indigo-500 uppercase tracking-widest">Start Learning</span>
-                 <svg className="w-4 h-4 text-slate-300 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                 <div className="flex flex-col">
+                   <span className="text-[10px] font-black text-indigo-500 uppercase tracking-widest">Visit Channel</span>
+                   <span className="text-[8px] text-slate-400 font-bold truncate max-w-[120px]">{channel.url.replace('https://www.', '')}</span>
+                 </div>
+                 <svg className="w-5 h-5 text-slate-300 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                  </svg>
                </div>
              </a>
@@ -425,13 +429,29 @@ const AIPreparationHub: React.FC = () => {
         </div>
 
         <div className="mt-10 p-6 bg-indigo-900 rounded-3xl text-white flex flex-col md:flex-row items-center gap-6 justify-between">
-           <div className="space-y-1">
-             <h5 className="font-black text-lg">Detailed Learning Roadmap?</h5>
-             <p className="text-xs text-indigo-300 font-medium">Check the Career Hub section for batch-specific study plans synchronized with these resources.</p>
+           <div className="space-y-1 text-center md:text-left">
+             <h5 className="font-black text-lg">Looking for more specific content?</h5>
+             <p className="text-xs text-indigo-300 font-medium">Use the link below to find targeted practice content on YouTube.</p>
            </div>
-           <div className="flex gap-3">
-              <a href="https://www.youtube.com/results?search_query=time+and+work+aptitude+tricks" target="_blank" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all">Work Tricks</a>
-              <a href="https://www.youtube.com/results?search_query=speed+time+distance+aptitude+tricks" target="_blank" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all">Speed Tricks</a>
+           <div className="flex flex-wrap justify-center gap-3">
+              <a 
+                href="https://www.youtube.com/results?search_query=quantitative+aptitude+full+course" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 bg-white text-indigo-900 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-indigo-50 transition-all flex items-center gap-2"
+              >
+                Full Aptitude Course
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </a>
+              <a 
+                href="https://www.youtube.com/results?search_query=technical+interview+questions+engineering" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 bg-indigo-800 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-indigo-700 transition-all flex items-center gap-2 border border-indigo-700"
+              >
+                Technical Drills
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </a>
            </div>
         </div>
       </div>
